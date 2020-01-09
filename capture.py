@@ -20,7 +20,7 @@ def get_image_from_camera():
         if (ret):
             cv_img = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             image = Image.fromarray(cv_img)
-            image = image.resize((200, 300),Image.ANTIALIAS) 
+            image = image.resize((320, 240),Image.ANTIALIAS) 
             bounding_boxes, landmarks = detect_faces(image)
             
             image = show_bboxes(image, bounding_boxes, landmarks)
